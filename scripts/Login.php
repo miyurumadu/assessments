@@ -12,6 +12,7 @@
         });
     </script>
     <body>
+        <div align="left" style="margin-top: 5%;margin-left: 5%">New to here?<a href="addstudents.php">Create an Account</a></div>
         <div align="center" style="margin-top: 10%;">
             <h1>Login</h1></br></br>
             <form method="post" action="auth.php">

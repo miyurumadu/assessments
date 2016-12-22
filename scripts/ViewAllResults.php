@@ -1,9 +1,15 @@
-<?php
 
+<html> <link rel="stylesheet" type="text/css" href="../css/test.css"></html>
+<?php
+session_start();
 include '../includes/dbconnection.php';
 
-$sql3 = "select subject,ICA01,ICA02,ICA03 from asdata where regno='2013/ICT/18'";
+$regno = $_SESSION["username"];
+$sql3 = "select subject,ICA01,ICA02,ICA03 from asdata where regno='$regno'";
 $results = mysqli_query($conn, $sql3);
+
+echo'<div><a class="topcorner" href="../scripts/Login.php"' . session_unset().
+session_destroy() . '>Log Out</a></div>';
 
 echo '<div align="center" style="margin-top: 2%;width: 100%"> <h1>View All Results 2016</h1>';
 echo '<table ><table border="1">

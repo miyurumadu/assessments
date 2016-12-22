@@ -13,9 +13,12 @@ and open the template in the editor.
         <title>
             Assessment Results 2016 
         </title>
-
+        <link rel="stylesheet" type="text/css" href="css/test.css">
     </head>
+    
     <body>
+       
+        <div ><a class="topcorner" href="scripts/Login.php" <?php echo' session_unset();session_destroy()' ?>>Log Out</a></div>
         <div align="center" style="width: 100%;margin-top:10%;">
             <h1>Assessment Results 2016 </h1></br>
             <form method="post" action="scripts/save.php">
@@ -23,11 +26,11 @@ and open the template in the editor.
                     <tr>
                         <td>
                             Student Reg.No:
-                            
+
                         </td>
                         <td>
                            <!-- <input type="text" name="regno">-->
-                            <?php echo $_SESSION["username"]?>
+                            <?php echo $_SESSION["username"] ?>
                             </br>
                             &nbsp;
                         </td> 

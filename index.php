@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -23,7 +26,8 @@ and open the template in the editor.
                             
                         </td>
                         <td>
-                            <input type="text" name="regno">
+                           <!-- <input type="text" name="regno">-->
+                            <?php echo $_SESSION["username"]?>
                             </br>
                             &nbsp;
                         </td> 
@@ -43,7 +47,9 @@ and open the template in the editor.
                                 <option value="ICT2262">ICT2262</option>
                                 <option value="ICT2272">ICT2272</option>
                                 <option value="ACU2210">ACU2210</option>
-                            </select> </br></br>
+                            </select> 
+                            </br>
+                            &nbsp;
                         </td>
                     </tr>
                     <tr>
@@ -56,7 +62,8 @@ and open the template in the editor.
                                 <option value="ICA02">ICA02</option>
                                 <option value="ICA03">ICA03</option>
                             </select>
-                            </br></br>
+                            </br>
+                            &nbsp;
                         </td>
                     </tr>
                     <tr>

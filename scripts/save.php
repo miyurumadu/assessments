@@ -1,13 +1,14 @@
 <?php
 
 include '../includes/dbconnection.php';
+session_start();
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-$regno = htmlspecialchars($_POST['regno']);
+$regno = $_SESSION["username"];
 $sub = htmlspecialchars($_POST['subject']);
 $ass = htmlspecialchars($_POST['ass']);
 $grade = htmlspecialchars($_POST['grade']);

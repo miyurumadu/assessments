@@ -12,6 +12,8 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         if($user==$row["regno"] && $pw==$row["password"]){
+            session_start();
+            $_SESSION["username"]=$user;
             header("Location:http://localhost:1234/asm/index.php");
         }
     }

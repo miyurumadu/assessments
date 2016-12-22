@@ -41,8 +41,9 @@
                 <button type="submit" class="submitBtn">Login</button>
                 <button type="reset" class="resetBtn">Cancel</button>
             </form>
-
+            <div align="bottom"><a href="#">Forgot Password?</a></div>
         </div>
+        
     </body>
 </html>
 

@@ -1,5 +1,6 @@
 <?php
 include '../includes/dbconnection.php';
+include 'PasswordHash.php';
 
 $name =htmlspecialchars($_POST['name']);
 $regno = htmlspecialchars($_POST['regno']);
@@ -8,7 +9,10 @@ $email = htmlspecialchars($_POST['email']);
 $password = htmlspecialchars($_POST['password']);
 $repassword = htmlspecialchars($_POST['repassword']);
 
-$sql1="insert into student values ('$name','$regno','$nic','$email','$password')";
+$hash = new PasswordHash(8, false);
+$hashed = $hash->HashPassword($password);
+
+$sql1="insert into student values ('$name','$regno','$nic','$email','$hashed')";
 
 if(mysqli_query($conn, $sql1)){
     ?>

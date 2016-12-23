@@ -1,7 +1,7 @@
 <?php
 
 include '../includes/dbconnection.php';
-include 'PasswordHash.php';
+include '../includes/PasswordHash.php';
 
 $user = htmlspecialchars($_POST['user']);
 $pw = htmlspecialchars($_POST['pw']);

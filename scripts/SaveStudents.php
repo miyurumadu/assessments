@@ -1,6 +1,6 @@
 <?php
 include '../includes/dbconnection.php';
-include 'PasswordHash.php';
+include '../includes/PasswordHash.php';
 
 $name =htmlspecialchars($_POST['name']);
 $regno = htmlspecialchars($_POST['regno']);
